@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Controle de atividades</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de controle de atividades</h1>
+        <p>Este sistema possui algumas funcionalidades necessárias para registro de atividades,
+            informando a hora de início e término, o sistema exibe o tempo gasto na atividade.</p>
+            <br>
+            <button id="BtnLogout">Logout</button>
+        <hr>
+
+        <form id="formulario">
+            <label>Início: </label>
+            <input type="time" id="inicio">
+            <label>Fim: </label>
+            <input type="time" id="fim">
+            <label>Atividade / observação: </label>
+            <input type="text" id="atividade">
+            <button type="submit" id="botaoInserir">Inserir</button>
+        </form>
+
+        <br>
+
+        <div id="divAtividades">
+            <hr>
+            <h2>Atividades em aberto</h2>
+            <table id="listaAtividades" class="tabelas">
+                <tr class="linhaTitulo">
+                    <th class="col200">Data/Hora início</th>
+                    <th class="col200">Data/Hora fim</th>
+                    <th class="col100">Minutos</th>
+                    <th>Atividade / Observação</th>
+                    <th>Ações</th>
+                </tr>
+            </table>
+            <p id="DuracaoMedia">Média de tempo por atividade: 0</p>
+        </div>
+        <div id="divAtividadesConfirmadas">
+            <hr>
+            <h2>Histórico</h2>
+            <table id="atividadesConfirmadas" class="tabelas">
+                <tr class="linhaTituloHistorico">
+                    <th class="col200">Data/Hora início</th>
+                    <th class="col200">Data/Hora fim</th>
+                    <th class="col100">Minutos</th>
+                    <th>Atividade / Observação</th>
+                    <th>Ações</th>
+                </tr>
+
+            </table>
+            <p id="DuracaoMediaConfirmados">Média de tempo por atividade: 0</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

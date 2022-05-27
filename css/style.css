@@ -1,0 +1,41 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr {
+    text-align: center;
+}
+
+.linhaTitulo{
+    background: rgb(134, 184, 250);
+}
+
+.linhaTituloHistorico{
+    background: rgb(147, 151, 156);
+}
+
+.col200{
+    width: 200px;
+}
+
+.col100{
+    width: 100px;
+}
+
+input {
+    margin-right: 10px;
+}
+
+.container {
+    width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tabelas{
+    border:black; 
+    width: 900px;
+}
