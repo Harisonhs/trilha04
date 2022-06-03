@@ -6,16 +6,59 @@ if (!logadoArmazenado) {
 const formulario = document.querySelector("#formulario")
 const btnDeslogar = document.querySelector("#BtnLogout")
 
+const mapAtividades = new Map()
+
 let atividadeArmazenada = localStorage.getItem("controleAtividades.atividade")
 
 let listaAtividades = Array()
-if (atividadeArmazenada != null) {
+if (atividadeArmazenada != null) { //ECMAScript 6 (ES6)
+    //let 
     listaAtividades = JSON.parse(atividadeArmazenada)
 
-    listaAtividades.forEach((obj) => {
+    // listaAtividades.forEach((obj) => {
+    //     insereNoDOM(obj)
+    // })
+
+    for(let obj of listaAtividades){
         insereNoDOM(obj)
-    })
+        mapAtividades.set(obj.inicio, obj)
+    }
 }
+console.log({listaAtividades})
+console.log({mapAtividades})
+
+const objClasseAtividade = new Atividade("13:00", "15:00", "trabalho")
+console.log(objClasseAtividade)
+
+
+const exponenciacao = (x, y = 2) => {
+    console.log({x})
+    console.log({y})
+    return x ** y
+}
+console.log(exponenciacao(3, 3))
+console.log(exponenciacao(3, 2))
+console.log(exponenciacao(3))
+console.log(exponenciacao(4))
+
+let atv2 = listaAtividades[1000] ?? 0
+console.log({atv2})
+
+let {inicio, fim, ...resto} = listaAtividades[0]
+console.log({inicio})
+console.log({fim})
+console.log({resto})
+
+const concatenacao = (a, ...b) => {
+    let retorno = a
+    for(let str of b){
+        retorno += str
+    }
+    return retorno
+}
+let professor = concatenacao("Harison", " ", "Herman", " ", "Silva")
+console.log({professor})
+
 
 btnDeslogar.addEventListener('click', function(){
     sessionStorage.setItem("controleAtividade.logado", false)
