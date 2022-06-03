@@ -1,7 +1,7 @@
-const logadoArmazenado = JSON.parse(sessionStorage.getItem("controleAtividade.logado"))
-if (!logadoArmazenado) {
-    window.location = "login.html"
-}
+// const logadoArmazenado = JSON.parse(sessionStorage.getItem("controleAtividade.logado"))
+// if (!logadoArmazenado) {
+//     window.location = "login.html"
+// }
 
 const formulario = document.querySelector("#formulario")
 const btnDeslogar = document.querySelector("#BtnLogout")
