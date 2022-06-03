@@ -59,6 +59,8 @@ const concatenacao = (a, ...b) => {
 let professor = concatenacao("Harison", " ", "Herman", " ", "Silva")
 console.log({professor})
 
+console.log(Array.from(professor))
+
 
 btnDeslogar.addEventListener('click', function(){
     sessionStorage.setItem("controleAtividade.logado", false)
